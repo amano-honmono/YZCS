@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307134430) do
+ActiveRecord::Schema.define(version: 20170307151441) do
 
   create_table "contests", force: :cascade do |t|
     t.string   "contest_name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20170307134430) do
     t.string   "problem_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["problem_url"], name: "index_problems_on_problem_url", unique: true
   end
 
   create_table "users", force: :cascade do |t|
