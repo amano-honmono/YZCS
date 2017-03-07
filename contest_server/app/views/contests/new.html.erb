@@ -1,0 +1,19 @@
+<h1>New Contest</h1>
+<%= form_for(@contest) do |f| %>
+  <div class="field">
+    <%= f.label :contest_name %><br>
+    <%= f.text_field :contest_name %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :ending_time %><br>
+    <%= f.datetime_select :ending_time %>
+  </div>
+
+  <div class="action">
+    <%= f.submit %>
+  </div>
+<% end %>

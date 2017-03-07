@@ -1,0 +1,14 @@
+<h1>Listing Contests</h1>
+<%= link_to 'New Contest', new_contest_path %><br>
+<table>
+  <tbody>
+    <% @contests.each do |contest| %>
+    <tr>
+      <td><%= contest.contest_name %></td>
+      <td><%= link_to 'Show', contest %></td>
+      <td><%= link_to 'Edit', edit_contest_path(contest) %></td>
+      <td><%= link_to 'Destroy', contest, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+    </tr>
+    <% end %>
+  <tbody>
+</table>
